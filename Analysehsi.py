@@ -55,6 +55,8 @@ for filename in filenames:
                 'grain_id': region.label,
                 'grain_type': filename,
                 'area': region.area,
+                'eccentricity': region.eccentricity,
+                'perimeter': region.perimeter,
                 **{f'band_{i+1}': mean_spectrum[i] for i in range(mean_spectrum.shape[0])}
             }
             grain_data.append(grain_info)
